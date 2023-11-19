@@ -1,0 +1,256 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    z-index: 100;
+    padding: 10px 25px;
+    border-bottom: solid 1px black;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 1000px;
+    height: 85vh;
+    gap: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+
+.hero-img img {
+    height: 500px;
+}
+
+.work-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+
+.work-subtitle {
+    color: #4b5563;
+    padding: 0px 20px 5px 20px;
+    margin: auto;
+    text-align: center;
+    max-width: 1000px;
+}
+.chip-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0px 20px;
+}
+
+.chip {
+    border-radius: 9999px;
+    border: solid 1px black;
+    padding: 4px 12px;
+    font-size: 14px;
+}
+
+.projects-container {
+    padding: 0px 20px;
+}
+.project {
+    margin: 40px auto;
+    max-width: 1024px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.img-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 150ms;
+}
+
+.project:hover .img-container {
+    transform: scale(1.05);
+}
+.img-overlay {
+    position: absolute;
+    inset: 0px;
+    background-color: #26262699;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-text-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+
+}
+
+.project-text-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    line-height: 40px;
+}
+
+.project-text-subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+footer {
+    padding: 30px;
+    background-color: rgb(229,231,235);
+}
+.footer-license {
+    color: #4b5563;
+    text-align: center;
+}
+
+button {
+    border: solid 1px black;
+    border-radius: 6px;
+    transition: border-radius 150ms;
+    /* transition: all 150ms; */
+    width: 128px;
+    padding: 8px 0px;
+    font-size: 14px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    border-radius: 10px;
+    /* background-color: green; */
+}
+
+.white-button {
+    background-color: white;
+    color: black;
+}
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding: 12px 0px;
+        margin-top: 70px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .hero-text-container {
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    p {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .hero {
+        min-height: unset;
+        margin-bottom: 40px;
+    }
+    .hero h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .hero-img img {
+        height: min(60vh, 360px);
+    }
+
+    .work-title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 6px;
+    }
+
+    .chip {
+        padding: 4px 10px;
+    }
+
+    .project {
+        margin: 25px auto;
+        height: 300px;
+    }
+
+    .project-text-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 12px;
+    }
+
+    .project-text-subtitle {
+        padding: 4px 0px;
+    }
+}
